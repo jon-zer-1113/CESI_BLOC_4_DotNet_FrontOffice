@@ -1,0 +1,19 @@
+<app-header></app-header>
+<select (change)="filtrerParSortid()">
+  <option value="">Tous les types de vin</option>
+  <option *ngFor="let sort of sortList" [value]="sort.id">{{ sort.name }}</option>
+</select>
+<div class="catalogue">
+  <div class="card" *ngFor="let produit of produits">
+    <img [src]="'assets/img/vins/' + produit.image" alt="{{ produit.nomDomaine }}">
+    <h1>{{ produit.nomDomaine }}</h1>
+    <p class="prix">Prix à la bouteille : {{ produit.prix }}€/HT</p>
+    <p>Millésime : {{ produit.millesime }}</p>
+    <p>Volume: 0.{{ produit.volume }}cl</p>
+    <p>
+      <button (click)="ajouterAuPanier(produit)">Ajouter au panier</button>
+    </p>
+  </div>
+</div>
+
+<app-footer></app-footer>

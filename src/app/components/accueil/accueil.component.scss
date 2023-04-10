@@ -1,0 +1,145 @@
+@font-face {
+    font-family: "Edensor Free";
+    src: url(../../../assets/font/Edensor-Free.otf);
+}
+
+@font-face {
+    font-family: "Collina Regular";
+    src: url(../../../assets/font/Collina-Regular.otf);
+}
+
+@font-face {
+    font-family: "Butler";
+    src: url(../../../assets/font/Butler/Butler_Medium.otf);
+}
+
+.bloc{
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.bloc img{
+    height: 100%;
+    width: 102%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -100;
+    transform: translate(-50%,-50%);
+}
+
+.middle{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle h1{
+    text-shadow: 2px 2px 2px black;
+    font-family: "Enderson Free";
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
+
+.btn {
+    text-transform: uppercase;
+    border: 0;
+    background:white;
+    font-family: 'Lato', sans-serif;
+    color: #a42424;
+    font-size: 14px;
+    border: 1px solid #a42424;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.boutonMiddle{
+    margin-top: 20px;
+    display: flex;
+}
+
+.boutonMiddle .btn1{
+    margin: 0px 15px;
+}
+
+.choix_vin{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+.choix_vin h1{
+    font-size: 40px;
+    color: #a42424;
+    font-family: 'Lato', sans-serif;
+}
+
+.liste{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.liste .card{
+    background-position: center;
+    background-size: cover;
+}
+
+.liste .card1{
+    background-image: url(../../../assets/img/RedWine.jpg);
+}
+
+.liste .card2{
+    background-image: url(../../../assets/img/White_Wine.jpg);
+}
+
+.liste .card3{
+    background-image: url(../../../assets/img/RoseWine.jpg);
+}
+
+.liste .card4{
+    background-image: url(../../../assets/img/Champagne_Bottlejpg.jpg);
+}
+
+.card1, .card2, .card3, .card4{
+    width: 280px;
+    max-width: 280px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a42424;
+    font-size: 40px;
+    text-shadow: 2px 2px 2px white;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+}
+
+
+@media screen and (max-width: 920px){
+
+    .middle h1{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .middle h1{
+        font-size: 25px;
+    }
+}

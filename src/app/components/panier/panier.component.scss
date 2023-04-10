@@ -1,0 +1,125 @@
+.panier {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 3rem 1rem;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.card {
+  width: 300px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.card img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  max-height: 250px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+.card p.prix {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+.card .quantity-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.card .quantity-controls button {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.card .quantity-controls button:hover {
+  background-color: #ddd;
+}
+
+.card .quantity-controls p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0 1rem;
+}
+
+.empty{
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.recap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.recap p.total {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0 1rem;
+}
+
+.commande {
+  background-color: #4c9eaf;
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.commande:hover {
+  background-color: #335976;
+}
+
+.supprimer {
+  padding: 0.5rem;
+  border: none;
+  background-color: transparent;
+  font-size: 2rem;
+  color: #888;
+  cursor: pointer;
+}
+
+.supprimer:hover {
+  color: #f00;
+}

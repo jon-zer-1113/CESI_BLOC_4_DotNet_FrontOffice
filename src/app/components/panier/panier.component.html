@@ -1,0 +1,31 @@
+<app-header></app-header>
+
+<div class="panier">
+    <div *ngIf="produits.length">
+        <p class="empty">Panier :</p>
+        <div class="card-container">
+            <div class="card" *ngFor="let produit of produits">
+                <button class="supprimer" (click)="supprimerProduit(produit)">&times;</button>
+                <img [src]="'assets/img/vins/' + produit.image" alt="{{ produit.nomDomaine }}">
+                <h1>{{ produit.nomDomaine }}</h1>
+                <p class="prix">Prix :{{ produit.prix }}€</p>
+                <div class="quantity-controls">
+                    <button (click)="decrementerQuantite(produit)">-</button>
+                    <p>{{ produit.quantite }}</p>
+                    <button (click)="incrementerQuantite(produit)">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="!produits.length">
+        <p class="empty">Comment ?! Le panier est vide ?!</p>
+    </div>
+
+    <div class="recap">
+        <p class="total">Total (TTC) : {{ getTotal() }} €</p>
+        <button class="commande">Commander</button>
+    </div>
+</div>
+
+<app-footer></app-footer>

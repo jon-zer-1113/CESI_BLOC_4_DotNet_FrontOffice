@@ -1,0 +1,27 @@
+<header>
+    <nav class="navbar">
+        <a href="#bloc" class="logo">NegoSud - Gascogne</a>
+        <div class="nav-links ">
+            <ul>
+                <div class="liste">
+                    <li><a [routerLink]="''">Accueil</a></li>
+                    <li><a [routerLink]="'/product'">Produits</a></li>
+                    <ng-container *ngIf="!estConnecte">
+                        <a [routerLink]="'/inscription'" class="btn1">
+                            <li><button class="btn">S'inscrire</button></li>
+                        </a>
+                        <a [routerLink]="'/connexion'" class="btn2">
+                            <li><button class="btn btn-secondary">Se connecter</button></li>
+                        </a>
+                    </ng-container>
+                    <ng-container *ngIf="estConnecte">
+                        <li><a [routerLink]="'/profil'">Mon profil</a></li>
+                        <li><a [routerLink]="'/panier'">Mon panier</a></li>
+                        <button class="btn btn-secondary" (click)="deconnecter()">Se deconnecter</button>
+                    </ng-container>
+                </div>
+            </ul>
+        </div>
+        <img src="../../../assets/img/menu-btn.png" alt="" class="menuburger">
+    </nav>
+</header>
